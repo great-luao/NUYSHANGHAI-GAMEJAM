@@ -78,9 +78,9 @@ public abstract class NPC_logic: MonoBehaviour
         {
             print("dia_index is" + dia_index);
             print(dialogue[dia_index]);
-            uI_Manager.ShowDialog(m_name, dialogue[dia_index]);
             UpdateDialog();
             ChangeState();
+            uI_Manager.ShowDialog(m_name, dialogue[dia_index]);
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
