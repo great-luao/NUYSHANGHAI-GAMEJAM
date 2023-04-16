@@ -31,12 +31,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3200154458325478699}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324, y: 34}
-  m_SizeDelta: {x: 1563.82, y: 675.38}
+  m_AnchoredPosition: {x: -311.17184, y: -158.84}
+  m_SizeDelta: {x: 1538.1637, y: 289.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3200154457802438056
 CanvasRenderer:
@@ -316,8 +316,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3200154458861735379}
   - {fileID: 3200154457802438058}
+  - {fileID: 3200154458861735379}
   - {fileID: 3200154458693111303}
   - {fileID: 3200154458432105503}
   m_Father: {fileID: 3200154458142572456}
@@ -364,8 +364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 693, y: -170}
-  m_SizeDelta: {x: 1568.5449, y: 1336.7571}
+  m_AnchoredPosition: {x: 649.182, y: -122}
+  m_SizeDelta: {x: 1647.1372, y: 1424.3938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3200154458432105501
 CanvasRenderer:
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 159b2a76fbc5d08479d2b5a7b5bd430b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5668c5f2eb385324eadee5795b3bfdfe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &3200154458432105500
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -424,7 +424,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3200154458693111304
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,8 +502,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279703508
+  m_fontColor: {r: 0.8301887, g: 0.09062707, b: 0.09062707, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -592,7 +593,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3200154458325478699}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -637,8 +638,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281293541
+  m_fontColor: {r: 0.8962264, g: 0.35216406, b: 0.18238568, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
