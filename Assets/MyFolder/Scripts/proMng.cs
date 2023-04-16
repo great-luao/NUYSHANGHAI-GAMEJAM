@@ -6,7 +6,7 @@ public class proMng : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public int state = 1;
+    public int state;
     public int ani = 0;
     void Start()
     {

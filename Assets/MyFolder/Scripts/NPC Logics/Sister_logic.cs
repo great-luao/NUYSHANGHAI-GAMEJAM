@@ -14,12 +14,17 @@ public class Sister_logic : NPC_logic
     public override void InitDialog()
     {
         base.InitDialog();
-        dialogue = total_Dialog.sister_dic[state];
+        dialogue = total_Dialog.sister_dic[st.state];
         dia_index = 0;
         m_name = "sister";
         //dialogue = new List<string> {"test first","test second","test third" };
     }
 
-
+    public override void ChangeState()
+    {
+        base.ChangeState();
+        if (st.state == 0) st.state = 1;
+        else if (st.state == 3) st.state = 4;
+    }
 
 }

@@ -27,12 +27,13 @@ public abstract class NPC_logic: MonoBehaviour
     protected int dia_index = 0;
     public event EventHandler OnPress;
 
-    protected int state;
+    protected proMng st;
 
     private void Awake()
     {
         uI_Manager = FindObjectOfType<UI_Manager>();
         total_Dialog = FindObjectOfType<Dialog>();
+        st = GameObject.Find("proMng").GetComponent<proMng>();
         print(total_Dialog);
         Init();
     }
@@ -40,7 +41,7 @@ public abstract class NPC_logic: MonoBehaviour
     private void Update()
     {
         if(OnPress != null) OnPress.Invoke(this, EventArgs.Empty);
-        ChangeState();
+        //ChangeState();
     }
    
 
@@ -79,6 +80,12 @@ public abstract class NPC_logic: MonoBehaviour
             print(dialogue[dia_index]);
             uI_Manager.ShowDialog(m_name, dialogue[dia_index]);
             UpdateDialog();
+            ChangeState();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            st.state += 1;
+            print(st.state);
         }
     }
 
@@ -89,13 +96,9 @@ public abstract class NPC_logic: MonoBehaviour
     }
 
     // Change State
-    private void ChangeState()
+    public virtual void ChangeState()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            state += 1;
-            print(state);
-        }
+
     }
 
 
