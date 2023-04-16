@@ -20,12 +20,25 @@ public class sspan : MonoBehaviour
     public GameObject ring;
     public GameObject letter;
 
+    public GameObject[] frm = new GameObject[3];
+
     void Awake(){
         st = GameObject.Find("proMng").GetComponent<proMng>();
         anim = GameObject.Find("Canvas").GetComponent<Animator>();
 
-        violin = GameObject.Find("item");
+        violin = GameObject.Find("violin");
         violin.SetActive(false);
+        ring = GameObject.Find("ring");
+        ring.SetActive(false);
+        letter = GameObject.Find("letter");
+        letter.SetActive(false);
+
+        // for(int i=0;i<3;i++){
+        //     frm[i] = GameObject.Find(fram[i]);
+        // }
+
+        frm[1].SetActive(false);
+        frm[2].SetActive(false);
     }
     
     void Update()
@@ -55,7 +68,7 @@ public class sspan : MonoBehaviour
 
         // }
 
-        if(istrigger&&Input.GetKey(KeyCode.Space)){
+        if(istrigger&&Input.GetKey(KeyCode.Space)&&play==0){
             if(st.state == 1){
                 violin.SetActive(true);
                 st.state++;
@@ -69,15 +82,17 @@ public class sspan : MonoBehaviour
                 st.state++;
             }
             if(st.state == 11){
-                st.state++;
+                st.state+=2;
             }
+
+            spam1();
             anim.SetInteger("click",0);
             anim.SetInteger(fram[span[st.state]],1);
             play = 1;
-            spam();
         }
         if(play == 1){
             if(Input.GetMouseButton(0)){
+                spam2();
                 play = 0;
                 anim.SetInteger("click",1);
                 anim.SetInteger(fram[span[st.state]],0);
@@ -85,11 +100,19 @@ public class sspan : MonoBehaviour
         }
     }
 
-    private void spam(){
+    private void spam1(){
         //reset position and structure
+        for(int i=0;i<3;i++){
+            frm[i].SetActive(false);
+        }
         return;
     }
 
+    private void spam2(){
+        //reset position and structure
+        frm[span[st.state]].SetActive(true);
+        return;
+    }
 
     private void OnTriggerEnter(Collider col)
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     public bool istrigger = false;
-    public int itemNum = 0;
+    public int itemNum;
     public int[] item = new int[4] {1, 5, 9, 0};
     // Start is called before the first frame update
 

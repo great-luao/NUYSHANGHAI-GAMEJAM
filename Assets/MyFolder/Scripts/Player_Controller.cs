@@ -23,7 +23,7 @@ public class Player_Controller : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         // 计算角色的移动向量
-        Vector3 movement = new Vector3(vertical, 0f, horizontal) * moveSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(-vertical, 0f, horizontal) * moveSpeed * Time.deltaTime;
         //print(movement);
 
 
@@ -33,7 +33,7 @@ public class Player_Controller : MonoBehaviour
         // 如果角色有移动输入，则将角色的朝向设置为移动方向
         if (movement.magnitude > 0)
         {
-            movement = new Vector3(-horizontal, 0f, vertical);
+            movement = new Vector3(horizontal, 0f, vertical);
             transform.rotation = Quaternion.LookRotation(movement);
         }
 
